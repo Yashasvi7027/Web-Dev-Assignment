@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yashasvi">
+    <title>Student Registration Form</title>
+</head>
+<header>
+    <h1 style="text-align: center;" >Student Registration Form</h1>
+    <p>Welcome to the student registration form.</p>
+    <nav>
+        <a href="#personal">Personal Information</a>  |  
+        <a href="#contandaddr">Contact and Address</a>  |  
+        <a href="#course">Course Details</a>  |  
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
+<body>
+    <form action="#">
+    <fieldset id="personal">
+        <legend><h2>Personal Information</h2></legend>
+        <label for="fullname">Full Name:</label>
+             <input type="text" id="fullname" name="fullname" placeholder="Enter your fullname" minlength="3" maxlength="50" autocomplete="name" required>
+             <br>
+
+        <p>Gender:
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="Other" required>
+            <label for="other">Other</label>
+            <br></p>
+
+        <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <br><br>
+
+        <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="16" max="60" step="1" value="18" required>
+            <br><br>
+
+        <label for="photo">Upload your photo here:</label>
+        <input type="file" name="photo" id="photo" accept="image/*"  style="width: 200px;" placeholder="Choose image file to upload" required>
+    </fieldset>
+
+    <fieldset id="contandaddr">
+        <legend><h2>Contact and Address</h2></legend>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" minlength="10" maxlength="10" pattern="[0-9]{10}" required> <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="student@example.com">
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" rows="4" cols="25"></textarea>
+    </fieldset>
+
+    <fieldset id="course">
+        <legend><h2>Course Details</h2></legend>
+        <label for="course" >Select a course</label>
+            <select name="course" id="course" required>
+                <option value="" disabled selected hidden>Select your course </option>
+                <option value="BTech">BTech in CSE</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+            </select><br><br>
+            <label for="campus">Select your campus</label>
+            <select name="campus" id="city">
+                <optgroup label="Rajasthan">
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Jodhpur">Jodhpur</option>
+                    <option value="Kota">Kota</option>
+                </optgroup>
+                <optgroup label="Other States">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Gurugram">Gurugram</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Patna">Patna</option>
+                </optgroup>
+            </select>
+            <br><br>
+    </fieldset>
+     <button type="submit">Submit Form</button>
+     <button type="reset">Clear Form</button>
+    </form>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Phone: 9876543210
+            Email: example@gmail.com
+        </p>
+        <p>
+            &copy; 2026. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
